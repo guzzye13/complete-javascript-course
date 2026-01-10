@@ -94,8 +94,8 @@ console.log(now - 1991 > now - 2018);
 */
 
 const now = 2037;
-const ageJonas = now - 1991;
-const ageSarah = now - 2018;
+const ageJonas = now - 1991; // 46
+const ageSarah = now - 2018; // 19
 
 console.log(now - 1991 > now - 2018);
 
@@ -106,5 +106,7 @@ x = y = 25 - 10 - 5; // example of right to left execution
 // x = y = 10, x = 10
 console.log(x,y);
 
-const averageAge = ageJonas + ageSarah / 2;
-console.log(ageJonas, ageSarah);
+// without parentheses then the averageAge would be wrong due to operator precedence
+// Grouping () is highest precedence
+const averageAge = (ageJonas + ageSarah) / 2;
+console.log(ageJonas, ageSarah, averageAge);
