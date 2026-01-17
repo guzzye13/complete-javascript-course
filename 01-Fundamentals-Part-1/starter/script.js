@@ -93,6 +93,7 @@ const isFullAge = ageSarah >= 18;
 console.log(now - 1991 > now - 2018);
 */
 
+/* Operator Precedence
 const now = 2037;
 const ageJonas = now - 1991; // 46
 const ageSarah = now - 2018; // 19
@@ -110,3 +111,54 @@ console.log(x,y);
 // Grouping () is highest precedence
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
+*/
+
+
+/**
+// Strings and Template Literals
+const firstName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const year = 2037;
+
+const jonas = "I'm "+ firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+console.log(jonas);
+
+// Example of Template Literals
+const jonasNew = `I'm ${firstName}, a ${(year-birthYear)} years old ${job}!`;
+console.log(jonasNew);
+
+console.log(`Just a regular string...`);
+
+// multi-line strings
+console.log('String with \n\
+multiple \n\
+lines');
+
+// Template Strings
+console.log(`String
+multiple
+lines`);
+*/
+
+// If/Else Statements 
+// IF ELSE control structure 
+const age = 15;
+
+if(age >= 18){
+      console.log('Sarah can start driving license 😀');
+} else {
+      const yearsLeft = 18 - age;
+      console.log(`Sarah is too young. Wait another ${yearsLeft} years.`);
+}
+
+const birthYear = 2012;
+
+let century; // variable 
+if(birthYear <= 2000){ // This is the condition - anything that returns a true or false value
+      // Anything inside is a code block
+      century = 20;
+} else {
+      century = 21;
+}
+console.log(century);
