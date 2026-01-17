@@ -141,6 +141,8 @@ multiple
 lines`);
 */
 
+
+/*
 // If/Else Statements 
 // IF ELSE control structure 
 const age = 15;
@@ -162,3 +164,60 @@ if(birthYear <= 2000){ // This is the condition - anything that returns a true o
       century = 21;
 }
 console.log(century);
+*/ 
+
+
+/** 
+// Type Conversion and Coercion
+// type conversion is manually converting
+// type coercion is automatic converting 
+
+// All examples of conversion
+const inputYear = '1991';
+console.log(Number(inputYear) + 18); // adds number with number
+console.log(Number(inputYear), inputYear);
+console.log(inputYear + 18);// cannot add string with number
+
+console.log(Number('Jonas')); // returns NaN (not a number)
+console.log(typeof NaN) // this returns a number but it is because its an invalid number 
+
+console.log(String(23), 23);
+
+
+// All examples of coercion 
+console.log('I am ' + 23 + ' years old.'); // "+" operator converts to string
+console.log('23' - '10' - 3); // - operator converts to numbers
+console.log('23' * '2'); // - operator converts to numbers
+
+let n = '1' + 1; // 1 + 1 -> 11 converted to string
+n = n - 1; // converts to number -> 11 - 1 = 10
+console.log(n);
+*/
+
+/**
+// Truth and Falsy Values 
+//  * Falsy values are values that are not exactly false but will become false when done in boolean 
+//  * 5 falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+
+const money = 100;
+if(money){
+      console.log(`Don't spend it all`);
+} else {
+      console.log('You should get a job');
+}
+
+let height = 10;
+if (height){
+      console.log('Yay height is defined');
+} else {
+      console.log('Height is not defined');
+}
+*/
+
+
+// Equality Operators: == vs ===

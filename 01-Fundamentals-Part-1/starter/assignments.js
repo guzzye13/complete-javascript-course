@@ -40,3 +40,11 @@ console.log(description1);
 // ********* Strings and Template Literals *********
 const description2 = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
 console.log(description2)
+
+
+// ********* Type Conversion and Coercion *********
+console.log('9' - '5'); // -> 4
+console.log('19' - '13' + '17'); // -> 617 (17 is a string)
+console.log('19' - '13' + 17); // -> 23 (17 is a number)
+console.log('123' < 57); // -> false
+console.log(5 + 6 + '4' + 9 - 4 - 2); // -> (5 and 6 are numbers) 114 9-4-2 = 3 ---> 1143
