@@ -220,4 +220,113 @@ if (height){
 */
 
 
+/** 
 // Equality Operators: == vs ===
+const age = 18;
+// === is a strict operator and only returns true when operators are the same
+if(age === 18) console.log('You just became an adult (Strict)');
+// '18' == 18 => true
+// '18' === 18 => false
+// Avoid Loose and use strict operator instead, it is a good rule
+if(age == 18) console.log('You just became an adult (Loose)');
+
+// converting string to number
+const favorite = Number (prompt("What is your favorite number?"));
+console.log(favorite);
+console.log(typeof favorite)
+
+if(favorite === 23){
+      console.log("Cool, 23 is an amazing number");
+} else if(favorite === 7){
+      console.log('7 is also a cool number')
+} else if(favorite === 9 ){
+      console.log('9 is also a cool number');
+} 
+else {
+      console.log('Number is not 23 or 7 or 9');
+}
+
+// !== strict version but always use the strict version
+// != loose version
+if(favorite !== 23) console.log("Why not 23?")
+*/
+
+
+/**
+// Boolean Logic
+// And, Or, and Not Operators
+// Logical Operators
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+if (shouldDrive){
+      console.log('Sarah is able to drive!')
+} else {
+      console.log('Someone else should drive...');
+}
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision || !isTired){
+      console.log('Sarah is able to drive!')
+} else {
+      console.log('Someone else should drive...');
+}
+*/
+
+
+// // Switch statement 
+// const day = 'thursday';
+
+// switch(day){
+//       case 'monday': 
+//             console.log('Plan course structure');
+//             console.log('Go to coding meetup');
+//             break;
+//       case 'tuesday':
+//             console.log('Prepare theory videos');
+//             break;
+//       case 'wednesday':
+//       case 'thursday':
+//             console.log('Write code examples');
+//             break;
+//       case 'friday':
+//             console.log('Record videos');
+//             break;
+//       case 'saturday':
+//       case 'sunday':
+//             console.log('Enjoy the weekend');
+//             break;
+//       default:
+//             console.log('Not a valid day!');
+// }
+
+// if(day === 'monday'){
+//       console.log('Plan course structure');
+//       console.log('Go to coding meetup');
+// } else if (day === 'tuesday'){
+//     console.log('Prepare theory videos');  
+// } else if(day === 'wednesday' || day === 'thursday'){
+//       console.log('Write code examples'); 
+// } else if(day === 'friday'){
+//       console.log('Record videos');
+// }
+// else if(day=== 'saturday' || day ==='sunday'){
+//       console.log('Enjoy the weekend');
+// } else {
+//       console.log('Not a valid day!');
+
+// }
+
+
+
+// Statements and Expressions
+// expression a piece of code that produces value 3 + 4
+// anything that ends with ; is a statement 

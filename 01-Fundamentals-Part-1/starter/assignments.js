@@ -48,3 +48,39 @@ console.log('19' - '13' + '17'); // -> 617 (17 is a string)
 console.log('19' - '13' + 17); // -> 23 (17 is a number)
 console.log('123' < 57); // -> false
 console.log(5 + 6 + '4' + 9 - 4 - 2); // -> (5 and 6 are numbers) 114 9-4-2 = 3 ---> 1143
+
+
+// ********* Equality Operators: == vs === *********
+const numNeighbors = Number(prompt("How many neighbor countries does your country have?"));
+console.log(numNeighbors);
+console.log(typeof numNeighbors);
+if(numNeighbors === 1){
+    console.log('Only 1 border!')
+} else if (numNeighbors > 1){
+    console.log('More than 1 border!');
+} else {
+    console.log('No borders');
+}
+
+
+// ********* Switch statement *********
+switch(language){
+    case 'Chinese':
+    case 'Madarin':
+        console.log('MOST number of native speaker!');
+        break;
+    case 'spanish':
+        console.log('2nd place in number of native speakers');
+        break;
+    case 'english':
+        console.log('3rd place');
+        break;
+    case 'hindi':
+        console.log('Number 4');
+        break;
+    case 'arabic':
+        console.log('5th most spoken language');
+        break;
+    default:
+        'Great language too :D';
+}
