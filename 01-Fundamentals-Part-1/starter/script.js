@@ -330,3 +330,34 @@ if (hasDriversLicense && hasGoodVision || !isTired){
 // Statements and Expressions
 // expression a piece of code that produces value 3 + 4
 // anything that ends with ; is a statement 
+
+
+
+// The Conditional (Ternary) Operator
+// ternary always an else statement which is :
+// ? if basically the if 
+const age = 23;
+// age >= 18 ? console.log('I like to drink wine.') : console.log('I like to drink water.')
+
+// ternary is an expression and an expression releases a value
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+let drink2;
+if(age >= 18){
+      drink2 = 'wine';
+} else{
+      drink2 = 'water';
+}
+console.log(drink2);
+
+// ternary you can use it in a template literal
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
+
+
+const bill = 275;
+/* Write your code below. Good luck! 🙂 */
+const tip = bill >= 50 && bill <=300 ?  0.15 * 275 : 0.20 * 275
+
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total was ${(bill + tip)}`)
