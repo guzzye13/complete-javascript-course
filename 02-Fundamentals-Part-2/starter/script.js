@@ -42,21 +42,59 @@
 
 
 // **** Functions vs Expressions ***
-// Function Declaration = use keyword function to declare a function and can be called at any time such as before the function is made 
-// Functions are values therefore we can call values
-function calcAge1(birthYear){
-    return 2037 - birthYear;
+// // Function Declaration = use keyword function to declare a function and can be called at any time such as before the function is made 
+// // Functions are values therefore we can call values
+// function calcAge1(birthYear){
+//     return 2037 - birthYear;
+// }
+
+// // call/invoke/execute function 
+// const age1 = calcAge1(1991);
+// console.log(age1);
+
+
+// // example of expression - instead of calcAge1 name it is a function without a name and still define parameters and function body
+// // must be called after the expression cannot call it before defining function
+// const calcAge2 = function (birthYear){
+//     return 2037 - birthYear;
+// }
+// const age2 = calcAge2(1991);
+// console.log(age1, age2);
+
+
+
+// //**** Arrow Functions *******/
+// // Third type of function -> a special form of function expression that is shorter and faster to write 
+// // Arrow Function 
+// // return happens implicitly 
+// const calcAge3 = birthYear => 2037 - birthYear;
+// const age3 = calcAge3(1991);
+// console.log(age3);
+
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//     const age = 2037-birthYear;
+//     const retirement = 65 - age;
+//     return `${firstName} retires in ${retirement} years`;
+// }
+
+// console.log(yearsUntilRetirement(1991, 'Eddy Guzman'));
+// console.log(yearsUntilRetirement(1998, 'Airpods'));
+
+
+
+//****** Functions Calling Other Functions ******/
+
+function cutFruitPieces(fruit){
+    return fruit * 3;
 }
 
-// call/invoke/execute function 
-const age1 = calcAge1(1991);
-console.log(age1);
+function fruitProcessor(apples, oranges){
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
 
-
-// example of expression - instead of calcAge1 name it is a function without a name and still define parameters and function body
-// must be called after the expression cannot call it before defining function
-const calcAge2 = function (birthYear){
-    return 2037 - birthYear;
+    const juice = `Juice with ${applePieces} piece of apples and ${orangePieces} piece of oranges.`; 
+    // template literal
+    return juice;
 }
-const age2 = calcAge2(1991);
-console.log(age1, age2);
+
+console.log(fruitProcessor(2,3));

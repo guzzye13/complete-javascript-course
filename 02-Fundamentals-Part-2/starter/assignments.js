@@ -30,3 +30,8 @@ const mexico2 =percentOfWorld2(1000)
 const canada2 =percentOfWorld2(900)
 
 console.log(china2, mexico2, canada2);
+
+/*** Arrow Functions */
+const percentOfWorld3 = population => (population/7900) * 100;
+const mexico3 = percentOfWorld3(1000);
+console.log(mexico3);
