@@ -53,7 +53,7 @@
 // console.log(age1);
 
 
-// // example of expression - instead of calcAge1 name it is a function without a name and still define parameters and function body
+// // example of function expression - instead of calcAge1 name it is a function without a name and still define parameters and function body
 // // must be called after the expression cannot call it before defining function
 // const calcAge2 = function (birthYear){
 //     return 2037 - birthYear;
@@ -82,19 +82,82 @@
 
 
 
-//****** Functions Calling Other Functions ******/
+// //****** Functions Calling Other Functions ******/
+// function cutFruitPieces(fruit){
+//     return fruit * 3;
+// }
 
-function cutFruitPieces(fruit){
-    return fruit * 3;
+// function fruitProcessor(apples, oranges){
+//     const applePieces = cutFruitPieces(apples);
+//     const orangePieces = cutFruitPieces(oranges);
+
+//     const juice = `Juice with ${applePieces} piece of apples and ${orangePieces} piece of oranges.`; 
+//     // template literal
+//     return juice;
+// }
+// console.log(fruitProcessor(2,3));
+
+
+
+/**
+ * Reviewing Functions
+ * Function declaration - Function that be used before its declared
+ * Function expression - Essentially a function value stored in a variable
+ * Arrow function - Great for a quick one-line functions. Has no this keyword.
+ * Three different ways of writing functions, but they all work in a similar way: receive input data, transform data, and then output data.
+*/
+// local variable to each function
+const calcAge = function(birthYear){
+    return 2037 - birthYear;
 }
 
-function fruitProcessor(apples, oranges){
-    const applePieces = cutFruitPieces(apples);
-    const orangePieces = cutFruitPieces(oranges);
+// /**
+//  * yearsUntilRetirement is the function name
+//  * @param {*} birthYear is a parameter: placeholders to receive input values. Like local variables of a function.
+//  * @param {*} firstName 
+//  * @returns 
+//  */
+// const yearsUntilRetirement = function (birthYear, firstName){
+//     // Arguments: actual values of function parameters to input data.
+//     // Calling running or invoking the function using()
+//     // "age" Variable to save returned value (function output)
+//     const age = calcAge(birthYear);
+//     const retirement = 65 - age;
 
-    const juice = `Juice with ${applePieces} piece of apples and ${orangePieces} piece of oranges.`; 
-    // template literal
-    return juice;
+//     if(retirement>0){
+//         console.log(`${firstName} retires in ${retirement} years`);
+//         return retirement; // to output a value from the function and terminate execution.
+//     }
+//     else{
+//         console.log(`${firstName} has alaready retired.`);
+//         return -1;
+
+//     }
+// }
+
+// console.log(yearsUntilRetirement(1991, 'Jonas'));
+// console.log(yearsUntilRetirement(1970, 'Mike'));
+
+// Challenge #1
+function calcAverage(firstScore, secondScore, thirdScore){
+    const calcScore = (firstScore+secondScore+thirdScore) / 3;
+    return calcScore;
 }
 
-console.log(fruitProcessor(2,3));
+function checkWinner(avgDolphins, avgKoalas){
+    if(avgDolphins >= (avgKoalas*2)){
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`)
+    }
+    else if(avgKoalas >= (avgDolphins * 2)){
+        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
+    } else 
+    {
+        console.log('No teams...')
+    }
+}
+
+const scoreDolphins = calcAverage(85,54,41);
+const scoreKoalas = calcAverage(23,34,27);
+const checkGameWinner = checkWinner(scoreDolphins, scoreKoalas)
+
+console.log(checkGameWinner);

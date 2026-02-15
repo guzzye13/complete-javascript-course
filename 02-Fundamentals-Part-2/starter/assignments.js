@@ -6,7 +6,7 @@ function describeCountry(country, population, capitalCity) {
 const unitedStates = describeCountry('USA', '10', 'Washington DC');
 const finland = describeCountry('Finland', 6, 'Helsinki');
 const test = describeCountry('Water', 4, 'Bottle City');
-console.log(unitedStates, finland, test);
+// console.log(unitedStates, finland, test);
 
 
 /*** Functions vs Expressions */
@@ -22,16 +22,25 @@ const percentOfWorld2 =function(population){
 const china = percentageOfWorld1(1441);
 const mexico = percentageOfWorld1(1000);
 const canada = percentageOfWorld1(900);
-console.log(china, mexico, canada);
+// console.log(china, mexico, canada);
 
 
 const china2 = percentOfWorld2(1441)
 const mexico2 =percentOfWorld2(1000)
 const canada2 =percentOfWorld2(900)
 
-console.log(china2, mexico2, canada2);
+// console.log(china2, mexico2, canada2);
 
 /*** Arrow Functions */
 const percentOfWorld3 = population => (population/7900) * 100;
 const mexico3 = percentOfWorld3(1000);
-console.log(mexico3);
+// console.log(mexico3);
+
+
+//*** Functions Calling Other Functions *******/
+function describePopulation(country, population){
+    const dataCalculation = percentageOfWorld1(population);
+    return `${country} has ${population} million people, which is about about ${dataCalculation}% of the world`;
+}
+
+console.log(describePopulation('China', 1441));
