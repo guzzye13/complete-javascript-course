@@ -44,3 +44,41 @@ function describePopulation(country, population){
 }
 
 console.log(describePopulation('China', 1441));
+
+//*** Introduction to arrays ***/
+const populations = [10, 1441, 332, 83];
+console.log(populations.length === 4);
+const percentages = [
+    percentageOfWorld1(populations[0]),
+    percentageOfWorld1(populations[1]),
+    percentageOfWorld1(populations[2]),
+    percentageOfWorld1(populations[3]),
+]
+console.log(percentages);
+
+
+//*** Basic Array Operations ***/
+const neighbors = ['USA', 'Canada', 'Mexico'];
+
+neighbors.push('Utopia'); // adding to the last array
+console.log(neighbors); 
+
+neighbors.pop(); // removes the last array 
+console.log(neighbors); 
+
+if(!neighbors.includes('Germany')){
+    console.log('Probably not a central european country :D')
+} 
+neighbors[neighbors.indexOf('USA')] = 'United States of America'
+console.log(neighbors);
+
+
+// ****  Introduction to Objects   ****
+const objects ={ 
+    country: 'Mexico',
+    capital: 'Mexico City',
+    language: 'Spanish',
+    population: 145,
+    neighbours: ['United States of America', 'Canada']
+}
+console.log(objects);
